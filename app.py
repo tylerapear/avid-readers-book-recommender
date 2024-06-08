@@ -5,7 +5,8 @@ import numpy as np
 #import pkg_resources
 
 
-st.header("Avid Readers Book Reccomender")
+st.header("Avid Readers Book Recommender")
+st.text("Build by: Tyler Pearson | Student ID: 011038224")
 
 # Get the path to the artifacts directory within the package
 #artifacts_dir = pkg_resources.resource_filename(__name__, 'artifacts')
