@@ -1,39 +1,39 @@
 import pickle
 import streamlit as st
 import numpy as np
-import os
-import pkg_resources
+#import os
+#import pkg_resources
 
 
 st.header("Avid Readers Book Reccomender")
 
 # Get the path to the artifacts directory within the package
-artifacts_dir = pkg_resources.resource_filename(__name__, 'artifacts')
+#artifacts_dir = pkg_resources.resource_filename(__name__, 'artifacts')
 
 # Paths to the files in the artifacts directory
-model_path = os.path.join(artifacts_dir, 'model.pkl')
-books_name_path = os.path.join(artifacts_dir, 'books_name.pkl')
-final_rating_path = os.path.join(artifacts_dir, 'final_rating.pkl')
-book_pivot_path = os.path.join(artifacts_dir, 'book_pivot.pkl')
+#model_path = os.path.join(artifacts_dir, 'model.pkl')
+#books_name_path = os.path.join(artifacts_dir, 'books_name.pkl')
+#final_rating_path = os.path.join(artifacts_dir, 'final_rating.pkl')
+#book_pivot_path = os.path.join(artifacts_dir, 'book_pivot.pkl')
 
-#model = pickle.load(open('model.pkl', 'rb'))
-#books_name = pickle.load(open('books_name.pkl', 'rb'))
-#final_rating = pickle.load(open('final_rating.pkl', 'rb'))
-#book_pivot = pickle.load(open('book_pivot.pkl', 'rb'))
+model = pickle.load(open('artifacts/model.pkl', 'rb'))
+books_name = pickle.load(open('artifacts/books_name.pkl', 'rb'))
+final_rating = pickle.load(open('artifacts/final_rating.pkl', 'rb'))
+book_pivot = pickle.load(open('artifacts/book_pivot.pkl', 'rb'))
 
-try:
-    with open(model_path, 'rb') as file:
-        model = pickle.load(file)
-    with open(books_name_path, 'rb') as file:
-        books_name = pickle.load(file)
-    with open(final_rating_path, 'rb') as file:
-        final_rating = pickle.load(file)
-    with open(book_pivot_path, 'rb') as file:
-        book_pivot = pickle.load(file)
+#try:
+ #   with open(model_path, 'rb') as file:
+  #      model = pickle.load(file)
+   # with open(books_name_path, 'rb') as file:
+   #     books_name = pickle.load(file)
+   # with open(final_rating_path, 'rb') as file:
+   #     final_rating = pickle.load(file)
+   # with open(book_pivot_path, 'rb') as file:
+   #     book_pivot = pickle.load(file)
 
-except Exception as e:
-    print("An error occured: ", e)
-    input("Press Enter to exit...")
+#except Exception as e:
+ #   print("An error occured: ", e)
+  #  input("Press Enter to exit...")
 
 
 #Get Paths to Data Visualization Images
