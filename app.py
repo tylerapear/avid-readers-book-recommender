@@ -18,8 +18,9 @@ st.header("Avid Readers Book Reccomender")
 
 model = pickle.load(open('artifacts/model.pkl', 'rb'))
 books_name = pickle.load(open('artifacts/books_name.pkl', 'rb'))
-final_rating = pickle.load(open('artifacts/final_rating.pkl', 'rb'))
 book_pivot = pickle.load(open('artifacts/book_pivot.pkl', 'rb'))
+final_rating = pickle.load(open('artifacts/final_rating.pkl', 'rb'))
+
 
 #try:
  #   with open(model_path, 'rb') as file:
